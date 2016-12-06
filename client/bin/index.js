@@ -23,7 +23,7 @@ exports.StudentInfoController = function($scope, $routeParams, $http, $mdDialog,
       .ok('Yes please!')
       .cancel('No thanks!');
 
-      //Deletes student if confirmed, otherwise do nothing
+      //Deletes student if confirmed, else do nothing
       $mdDialog.show(confirm).then(function() {
         $http.
           delete('/api/v1/student/' + id).
@@ -123,7 +123,7 @@ exports.NewStudentController = function($scope, $http, $location) {
     option.pop();
   }
 
-  //Adds student to database
+  //Adds student to the database
   $scope.addStudent = function() {
 
     $scope.student.firstName = $scope.firstName;
@@ -284,7 +284,7 @@ exports.UserProfileController = function($scope, $http, $routeParams, $mdDialog,
   $scope.showConfirm = function(ev) {
     var confirm = $mdDialog.confirm()
       .title('Do you want to DELETE this user?')
-      .textContent('This will permanently delete the user')
+      .textContent('This will permanently delete the user.')
       .ariaLabel('Lucky day')
       .targetEvent(ev)
       .ok('Yes please!')
