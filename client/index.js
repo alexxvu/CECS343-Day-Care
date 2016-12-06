@@ -78,7 +78,7 @@ app.config(function($routeProvider) {
     });
 });
 
-//Checks if user is logged in and redirects to login page if they are not
+//Checks if user is logged in and redirects to login page if they are not logged in
 app.run(function ($rootScope, $location, $route, AuthService) {
   $rootScope.$on('$routeChangeStart',
     function (event, next, current) {
